@@ -39,6 +39,26 @@ stopBtn.addEventListener('click',()=>{
      ifNotSpoke = false;
     });
 
+
+//EVENTS FOR MOBILE
+    microphone.addEventListener('touchstart', () => {
+        speechSynthesis.cancel();
+        ifNotSpoke = false;
+        recognition.start();
+        microphone.style.animationName = 'micAnimate';
+        microphone.style.animationPlayState = 'running';
+    });
+    
+    microphone.addEventListener('touchend', () => {
+        openaiIcon.style.animationName = 'rotate';
+        recognition.stop();
+        video.play();
+        openaiIcon.style.animationPlayState = 'running';
+        openaiIcon.style.fill = 'lightblue';
+        microphone.style.animationName = 'none';
+    });
+
+
 recognition.addEventListener('result',(event) => {
     const api_key = document.querySelector('.api_key').value;
     const message = event.results[event.results.length - 1][0].transcript
