@@ -1,0 +1,107 @@
+@media screen and (min-width: 1920px) {
+    .demoBox{
+        width: 600px;
+    }
+    .demoBox input {
+        height: 50px;
+        font-size: x-large
+    }
+
+    .controlBtns input{
+        height: 60px;
+        width: 1000px;
+        font-size: xx-large
+    }
+    .controlBtns i {
+        font-size: 60px;
+    }
+
+    .demoBox .fa-circle-question{
+        font-size: xx-large;
+    }
+    #openaiIcon{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .demoBox, .controlBtns>input{
+        font-size: 17px;
+    }
+    .demoBox{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .demoBox input {
+        height: 50px;
+        width: 90%;
+        align-self: center;
+        justify-content: center;
+    }
+    .controlBtns{
+       padding: 0px 10px;
+       flex-direction: column;
+       gap: 50px;
+    }
+    .btns{
+        gap: 80px;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .controlBtns input{
+        height: 50px;
+        width: 100%;
+        
+    }
+    .controlBtns i {
+        font-size: 40px;
+        width: 10%;
+    }
+
+    .demoBox .fa-circle-question{
+        display: none;
+    }
+    .tutorial{
+        width: 100%;
+        position: fixed;
+        display: block;
+        left: 0;
+        top: auto;
+        bottom: 0;
+        border-radius: 0px 0px 20px 20px;
+        overflow: hidden;
+
+    }
+    #openaiIcon{
+        width: 150px;
+        height: 150px;
+        right: auto;
+        left: 50%;
+        transform: translate(-50%,50%);
+        animation-name: rotate;
+    }
+    @keyframes rotate {
+        0%{
+            transform: translate(-50%,50%) rotate(0deg);
+        }
+        100%{
+            transform: translate(-50%,50%) rotate(1800deg);
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 440px) {
+    .demoBox input {
+        padding: 5px;
+        width: 90%;
+    }
+    .tutorial{
+        font-size: small;
+    }
+}

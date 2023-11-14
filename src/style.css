@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    overflow: hidden;
+    font-family: 'Anek Kannada', sans-serif;
+    font-weight: 200;
+}
+
+.App{
+    width: 100%;
+    height: 100vh;
+}
+
+.Wrapper{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+.App video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+.bgContainer{
+    position: fixed;
+    z-index: -5;
+    width: 100%;
+}
+
+
+
+#openaiIcon{
+    position: absolute;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    fill: lightblue;
+    opacity: 0.7;
+    animation-name: rotate;
+    animation: 2s infinite ease-in-out;
+    animation-direction: alternate;
+    animation-play-state: paused;
+    
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+        scale: 1;
+    }
+    100%{
+        transform: rotate(1800deg);
+        scale: 1.2;
+    }
+}
+
+.demoBox{
+    position: fixed;
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    width: 400px;
+}
+
+.demoBox input {
+    height: 35px;
+    width: 100%;
+    padding-left: 5px;
+    opacity: 0.8;
+    background-color: black;
+    color: white;
+    border: 0;
+    padding-right: 33px;
+}
+
+.demoBox .fa-circle-question{
+    position: absolute;
+    right: 5px;
+}
+
+.fa-circle-question:hover ~ .tutorial{
+    display: block;
+}
+
+.tutorial{
+    background-color: rgba(0, 0, 0, 0.653);
+    color: white;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+    border-radius: 20px 0px 20px 20px;
+    right: 0;
+    display: none;
+}
+
+.tutorial li{
+    font-weight: 900;
+}
+
+
+.controlBtns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 100vh;
+}
+
+.btns{
+    gap: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.controlBtns span {
+    cursor: pointer;
+}
+
+.fa-microphone {
+    animation-name: none;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes micAnimate {
+    0%{
+        opacity: 1;
+        scale: 1;
+        color: white;
+    }
+    100%{
+        opacity: 0.5;
+        scale: 0.9;
+        color: rgb(0, 132, 0);
+    }
+}
+
+.controlBtns input {
+    height: 40px;
+    font-size: large;
+    width: 600px;
+    opacity: 0.7;
+    padding-left: 10px;
+}
